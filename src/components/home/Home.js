@@ -74,9 +74,15 @@ export default function Home() {
     localStorage.setItem("cartItems", JSON.stringify(cart))
   }, [plushyData, candleData, airpodData])
 
-  const removeItem = () => {
-    console.log("object");
-  }
+
+  const removeItem = (item) => {
+    const newCartData = cartItems?.filter((cartItem) => {
+      return item?.id != cartItem?.id;
+    });
+    setCartItems(newCartData);
+    localStorage.setItem("cartItems", JSON.stringify(newCartData));
+  };
+
 
   return (
     <div>
@@ -144,7 +150,7 @@ export default function Home() {
         <div className="modal-div">
           {cartItems?.length === 0 ?
             <div className="cart-empty">Cart is Empty</div>
-            : cartItems?.map((item) => {
+            : cartItems?.map((item, i) => {
               console.log("ittttttem", item);
               return (
 
@@ -158,9 +164,9 @@ export default function Home() {
                       ${item?.price}
                     </span>
                   </div>
-                  {/* <div onClick={() => { removeItem(item) }}> */}
-                  <img style={{ cursor: "pointer", width: "30px" }} height="20px" src={Trash} />
-                  {/* </div> */}
+                  <div onClick={() => { removeItem(item, i) }}>
+                    <img style={{ cursor: "pointer", width: "30px" }} height="20px" src={Trash} />
+                  </div>
                 </div>
 
               )
@@ -184,7 +190,9 @@ export default function Home() {
         <DialogActions>
           <Button onClick={handleClose}>Cancel</Button>
           <Button onClick={() => { handlePay() }} autoFocus>
-            Pay
+            Pay  ${cartItems
+              ? cartItems?.reduce((total, item) => total + item.price, 0)
+              : 0}
           </Button>
         </DialogActions>
       </Dialog>

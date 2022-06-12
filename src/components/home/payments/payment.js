@@ -6,7 +6,7 @@ const Payment = () => {
     return (
         <div className="form-inputs">
             <div className="inputs">
-                <div>  Enter Name On Card</div>
+                <div>Enter Name On Card</div>
                 <input className="email-input" type="text" />
             </div>
             <div className="inputs">
