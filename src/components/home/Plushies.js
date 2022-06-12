@@ -110,6 +110,7 @@ export default function Plushies(props) {
                                         </div>
                                         <div className="card-details">
                                             <p>{item.name}</p>
+                                            <span>Price : ${item.price}</span>
                                             <div className="rating-alignment">
                                                 {item.id === 3 && [1, 2, 3, 4].map(() => {
                                                     return (

@@ -92,6 +92,7 @@ export default function Airpod(props) {
                                         </div>
                                         <div className="card-details">
                                             <p>{item.name}</p>
+                                            <span>Price : ${item.price}</span>
                                             <div className="rating-alignment">
                                                 {item.id === 1 && [1, 2, 3, 4].map(() => {
                                                     return (

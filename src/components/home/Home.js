@@ -13,6 +13,9 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
+import 'react-toastify/dist/ReactToastify.css';
+import Plan from "./payments/Plan";
+import Next from "../../assets/images/next.png"
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -53,8 +56,15 @@ export default function Home() {
     slidesToScroll: 1,
   };
 
-  const handleClose = () => {
-    setOpen(false);
+  const handleClose = () => { setOpen(false) }
+
+  const handlePay = () => {
+    // setTimeout(() => {
+    //   toast.success("Payment Successfull")
+    //   setTimeout(() => {
+    //     toast.success("Payment Successfull")
+    //   }, [2000])
+    // }, [2000])
   };
 
   let cart = [...plushyData, ...candleData, ...airpodData]
@@ -108,7 +118,12 @@ export default function Home() {
       }
       <div className={modalOpen ? "modal-medium modal-show" : "modal-medium modal-hidden"}>
         <div className="close-icon">
-          <div>Cart</div>
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <div>Cart</div>
+            <div className="cart-text" onClick={() => { setOpen(true); setModalOpen(false) }}>
+              <img height="20px" src={Next} />{`Checkout`}
+            </div>
+          </div>
           <span onClick={() => setModalOpen(false)}>
             <svg
               width="24"
@@ -153,6 +168,7 @@ export default function Home() {
           }
         </div>
       </div>
+      {/* <ToastContainer /> */}
       <Dialog
         open={open}
         onClose={handleClose}
@@ -160,18 +176,15 @@ export default function Home() {
         aria-describedby="alert-dialog-description"
       >
         <DialogTitle id="alert-dialog-title">
-          {"Use Google's location service?"}
+          Checkout
         </DialogTitle>
         <DialogContent>
-          <DialogContentText id="alert-dialog-description">
-            Let Google help apps determine location. This means sending anonymous
-            location data to Google, even when no apps are running.
-          </DialogContentText>
+          <Plan />
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose}>Disagree</Button>
-          <Button onClick={handleClose} autoFocus>
-            Agree
+          <Button onClick={handleClose}>Cancel</Button>
+          <Button onClick={() => { handlePay() }} autoFocus>
+            Pay
           </Button>
         </DialogActions>
       </Dialog>

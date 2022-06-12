@@ -75,6 +75,7 @@ export default function Candles(props) {
                                         </div>
                                         <div className="card-details">
                                             <p>{item.name}</p>
+                                            <span>Price : ${item.price}</span>
                                             <div className="rating-alignment">
                                                 {item.id === 7 && [1, 2, 3, 4].map(() => {
                                                     return (

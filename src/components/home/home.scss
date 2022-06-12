@@ -249,3 +249,55 @@
     font-size: 20px;
     font-weight: 600;
 }
+
+.cart-text {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: 300ms;
+
+    &:hover {
+        color: #3619c7;
+        transition: 300ms;
+    }
+}
+
+.form-inputs {
+    width: 500px;
+    padding: 10px;
+
+    .inputs {
+        margin-bottom: 15px;
+        width: 100%;
+
+        input {
+            margin-top: 5px;
+        }
+
+        .email-input {
+            border: 1px solid #d3d3d3;
+            border-radius: 5px;
+            padding: 5px;
+            height: 30px;
+            outline: none;
+            font-size: 16px;
+            width: 98%;
+
+
+        }
+
+        .email-input-card {
+            border: 1px solid #d3d3d3;
+            border-radius: 5px;
+            padding: 11px;
+            margin-top: 5px;
+            outline: none;
+            font-size: 16px;
+            padding-top: 10px;
+
+
+
+
+        }
+    }
+}
