@@ -1,0 +1,18 @@
+// @use './mixins/breakpoint.scss';
+// @use './mixins/typography.scss';
+// @use './mixins/columns.scss';
+// @use './function/columns.scss';
+// @use './layout/container.scss';
+// @use './mixins/index.scss';
+
+
+@import '../function/columns.scss';
+@import '../layout/container.scss';
+@import '../mixins/columns.scss';
+@import '../mixins/breakpoint.scss';
+@import '../mixins/index.scss';
+@import '../mixins/typography.scss';
+
+img {
+    max-width: 100%;
+}
