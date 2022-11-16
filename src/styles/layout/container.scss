@@ -1,5 +1,6 @@
 // @use  '';
 @use "../mixins/breakpoint.scss" as bp;
+
 $bp: (
   base: 0px,
   sm: 540px,
@@ -12,6 +13,7 @@ $bp: (
   max-width: 100%;
   padding: 0 60px;
   margin: 0 auto;
+  
 }
   
 .container-md {

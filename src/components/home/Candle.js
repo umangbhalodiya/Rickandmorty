@@ -69,7 +69,8 @@ export default function Candles(props) {
                         <Slider {...settings}>
                             {images.map((item, i) => {
                                 return (
-                                    <div className="slide-card">
+                                   
+                                         <div className="slide-card">
                                         <div className="product-image-one">
                                             <img src={item.image} />
                                         </div>
@@ -112,6 +113,8 @@ export default function Candles(props) {
                                             </div>
                                         </div>
                                     </div>
+                                  
+                                   
                                 );
                             })}
                         </Slider>

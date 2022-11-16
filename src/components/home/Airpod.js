@@ -33,11 +33,37 @@ function SamplePrevArrow(props) {
 export default function Airpod(props) {
     const [cartItem, setCartItem] = useState([])
     const settings = {
+        centerMode: true,
+        centerPadding: '10px',
         slidesToShow: 4,
-        infinite: true,
         speed: 500,
         slidesToScroll: 1,
-    };
+        arrows: true,
+        dots: false,
+        responsive: [
+            {
+                breakpoint: 1440,
+                settings: {
+                  arrows: false,
+                  slidesToShow: 3,
+                },
+              },
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              slidesToShow: 2,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: false,
+              slidesToShow: 1,
+            },
+          },
+        ],
+      };
 
     const images = [
         {
@@ -86,7 +112,8 @@ export default function Airpod(props) {
                         <Slider {...settings}>
                             {images.map((item, i) => {
                                 return (
-                                    <div className="slide-card">
+                                 
+                                    <div className="slide-card ">
                                         <div className="product-image">
                                             <img src={item.image} />
                                         </div>
@@ -122,9 +149,13 @@ export default function Airpod(props) {
                                             </div>
                                         </div>
                                     </div>
+                                    
                                 );
                             })}
                         </Slider>
+
+                      
+            
                     </div>
                 </div>
             </div>
