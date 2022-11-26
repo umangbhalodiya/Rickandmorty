@@ -2,7 +2,6 @@ import React from "react";
 import CardInputs from "./Cardinput";
 
 const Payment = () => {
-
     return (
         <div className="form-inputs">
             <div className="inputs">
@@ -19,10 +18,8 @@ const Payment = () => {
                     <CardInputs />
                 </div>
             </div>
-
         </div>
     )
-
 }
 
 export default Payment;
