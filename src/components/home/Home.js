@@ -17,28 +17,6 @@ import Plan from "./payments/Plan";
 import Next from "../../assets/images/next.png";
 import barIcon from "../../assets/images/menu.png";
 
-function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "red" }}
-      onClick={onClick}
-    />
-  );
-}
-
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "green" }}
-      onClick={onClick}
-    />
-  );
-}
-
 export default function Home() {
   const [modalOpen, setModalOpen] = useState(false);
   const [open, setOpen] = useState(false);
@@ -48,14 +26,7 @@ export default function Home() {
   const [candleData, setCandleData] = useState([]);
   const [plushyData, setPlushyData] = useState([]);
   const [opneMenu, setOpneMenu] = useState(false);
-
-  const settings = {
-    slidesToShow: 4,
-    infinite: true,
-    speed: 500,
-    slidesToScroll: 1,
-  };
-
+ 
   const handleClose = () => {
     setOpen(false);
   };
