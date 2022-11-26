@@ -8,28 +8,6 @@ import Image3 from "../../assets/images/111.jpeg"
 import Image4 from "../../assets/images/2.jpeg"
 import Image5 from "../../assets/images/22.jpeg"
 import Image6 from "../../assets/images/222.jpeg"
-function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-        <div
-            className={className}
-            style={{ ...style, display: "block", background: "red" }}
-            onClick={onClick}
-        />
-    );
-}
-
-function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-        <div
-            className={className}
-            style={{ ...style, display: "block", background: "green" }}
-            onClick={onClick}
-        />
-    );
-}
-
 export default function Airpod(props) {
     const [cartItem, setCartItem] = useState([])
     const settings = {
@@ -153,9 +131,6 @@ export default function Airpod(props) {
                                 );
                             })}
                         </Slider>
-
-                      
-            
                     </div>
                 </div>
             </div>
