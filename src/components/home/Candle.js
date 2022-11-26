@@ -89,8 +89,6 @@ export default function Candles(props) {
                                             </div>
                                         </div>
                                     </div>
-
-
                                 );
                             })}
                         </Slider>
