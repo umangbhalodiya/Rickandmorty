@@ -127,7 +127,6 @@ export default function Airpod(props) {
                                             </div>
                                         </div>
                                     </div>
-                                    
                                 );
                             })}
                         </Slider>

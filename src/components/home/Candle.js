@@ -6,31 +6,7 @@ import Image1 from "../../assets/images/7.jpeg"
 import Image2 from "../../assets/images/8.jpeg"
 import Image3 from "../../assets/images/9.jpeg"
 
-
-function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-        <div
-            className={className}
-            style={{ ...style, display: "block", background: "red" }}
-            onClick={onClick}
-        />
-    );
-}
-
-function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-        <div
-            className={className}
-            style={{ ...style, display: "block", background: "green" }}
-            onClick={onClick}
-        />
-    );
-}
-
 export default function Candles(props) {
-    const [modalOpen, setModalOpen] = useState(false);
     const [cartItem, setCartItem] = useState([])
 
     const settings = {
@@ -69,8 +45,8 @@ export default function Candles(props) {
                         <Slider {...settings}>
                             {images.map((item, i) => {
                                 return (
-                                   
-                                         <div className="slide-card">
+
+                                    <div className="slide-card">
                                         <div className="product-image-one">
                                             <img src={item.image} />
                                         </div>
@@ -113,8 +89,8 @@ export default function Candles(props) {
                                             </div>
                                         </div>
                                     </div>
-                                  
-                                   
+
+
                                 );
                             })}
                         </Slider>
