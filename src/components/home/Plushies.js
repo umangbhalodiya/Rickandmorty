@@ -10,34 +10,9 @@ import Image5 from "../../assets/images/33333.jpeg"
 import Image6 from "../../assets/images/4.jpeg"
 import Image7 from "../../assets/images/5.jpeg"
 import Image8 from "../../assets/images/6.jpeg"
-function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-        <div
-            className={className}
-            style={{ ...style, display: "block", background: "red" }}
-            onClick={onClick}
-        />
-    );
-}
-
-function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-        <div
-            className={className}
-            style={{ ...style, display: "block", background: "green" }}
-            onClick={onClick}
-        />
-    );
-}
 
 export default function Plushies(props) {
-
-    const [modalOpen, setModalOpen] = useState(false)
     const [cartItem, setCartItem] = useState([])
-
-
     const settings = {
         slidesToShow: 4,
         infinite: true,
