@@ -6,10 +6,9 @@ import './styles/mixins/global.scss';
 
 function App() {
   return (
-    <>
+    
       <Home/>
-    </>
-  );
+   );
 }
 
 export default App;
