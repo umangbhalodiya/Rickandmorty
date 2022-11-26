@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import { CardElement } from "@stripe/react-stripe-js";
-import { useSearchParams } from "react-router-dom";
 
 const CARD_ELEMENT_OPTIONS = {
   style: {
